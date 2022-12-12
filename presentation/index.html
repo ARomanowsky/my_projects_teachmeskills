@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>WikiBot</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="./images/machine_learning.png" class="first-section">
+					<h1>WikiBot</h1>
+					<h3>презентация проекта</h3>
+					<p>
+						<font-size=5>on reveal.js</font-size>
+					</p>
+					<p>
+						<small>Автор<a href="https://github.com/ARomanowsky" target="_blank"> Александр Романовский</a></small>
+					</p>
+					<aside class="notes">
+						Hello! Today I want to tell you about WikiBot
+					</aside>
+				</section>
+				<section>
+					<h2>Содержание</h2>
+					<ul>
+						<li>Описание проекта</li>
+						<li>Библиотека Wikipedia Python</li>
+						<li>Монетизация проекта</li>
+						<li>Конкуренты</li>
+					</ul>
+					<p>Let’s begin!</p>
+					<aside class="notes">
+						План презентаци
+				</section>
+			<section>
+				<section>
+					<h2>Описание проекта</h2>
+					<p>
+						Википедия является одним из крупнейших и наиболее популярных источников информации в Интернете
+					</p>
+					<aside class="notes">
+						<p>>More importantly, we are far from seeing its full potential.</p> 
+						<p>There’s no doubt, it will continue to be making headlines for the foreseeable future.</p>
+					</aside>
+				</section>
+				<section>
+					<p>
+						Расположена на сайте wikipedia.org, является свободной общедоступной мультиязычной универсальной интернет-энциклопедией. Создаётся на безвозмездной основе силами волонтёров — сообществом участников проекта, по установленным ими же правилам</p>
+					<aside class="notes">
+						<p>The reason that Machine Learning is so exciting, is because it is a step away from all our previous rule-based systems of:</p>
+						<p>if(x = y): do z.</p>
+					</aside>
+				</section>
+				<section>
+					<p>
+						Разбита на несколько разделов по языковому принципу с организационно независимым сообществом для каждого раздела, но общими ключевыми принципами, одинаковыми для всего проекта
+					</p>
+					<img src="./images/wiki.jpg" alt="traditionally">
+					<aside class="notes">
+						To learn the rules governing a phenomenon, machines have to go through a learning process, trying different rules and learning from how well they perform.
+					</aside>
+				</section>
+				<section>
+					<p>
+						С учетом роста популярности Telegram-ботов разработан проект WikiBot, позволяющий реализовать возможности Википедии посредством Telegram, а также расширить имеющиеся возможности 
+					</p>
+					<img src="./images/telegrambot.jpg" alt="discover">
+					<aside class="notes">
+						Hence, why it’s known as Machine Learning.
+					</aside>
+				</section>
+				<section>
+					<p>
+						Бот является мультиязычным. В настоящее время реализована возможность выбора английского, итальянского и русского языков. Планируется добавить китайский язык и хинди с учетом потенциально огромного количества пользователей
+					</p>
+					<img src="./images/lang.png" alt="lang">
+					<aside class="notes">
+						This explanation covers the general Machine Leaning concept and then focusses in on each approach.
+					</aside>
+				</section>
+				<section>
+					<p>
+						После выбора языка посредством InlineKeyboardButton приветствие и вывод запросов реализуется на выбранном языке. Посредством KeyboardButton реализована возжность вывода инструкции по использованию бота
+					</p>
+					<img src="./images/button.png" alt="button">
+					<aside class="notes">
+						This explanation covers the general Machine Leaning concept and then focusses in on each approach.
+					</aside>
+				</section>
+				<section>
+					<p>
+						После ввода запроса выводится сообщение, содержащее краткое описание введенного слова или словосочетания
+					</p>
+					<img src="./images/request.jpg" alt="request">
+					<aside class="notes">
+						Hence, why it’s known as Machine Learning.
+					</aside>
+				</section>
+				<section>
+					<p>
+						При необходимости прочтения полной статьи на Википедии, просмотра видео на Youtube или фотографий на Shutterstock выводятся Inline-кнопки, при нажатии на которые осуществляется переход на соответствующий ресурс
+					</p>
+					<img src="./images/resources.png" alt="resources">
+					<aside class="notes">
+						Hence, why it’s known as Machine Learning.
+					</aside>
+				</section>
+				<section>
+					<p>
+						Дополнительно выводится сообщение с возможными вариантами запросов для уточнения
+					</p>
+					<img src="./images/сarification.png" alt="сarification">
+					<aside class="notes">
+						Hence, why it’s known as Machine Learning.
+					</aside>
+				</section>
+				
+			</section>
+		    <section>
+				<section>
+					<h3>Библиотека Wikipedia Python</h3>
+					<img src="./images/Wikipedia-API-Python.png" alt="Wikipedia-API-Python">
+					<aside class="notes">
+							Библиотека Wikipedia Python
+					</aside>
+				</section>
+			    <section>
+					<p>
+						Для извлечения данных из Википедии использована библиотека Wikipedia Python, которая является оберткой для MediaWiki API
+					</p>
+					<aside class="notes">
+						Terminology - Dataset, Features & Model.
+					</aside>
+				</section>
+				<section>
+					<p>
+						В данном проекте используются следующие методы функции wikipedia:
+					</p>
+					<p>
+						summary (): статья, для которой необходимо извлечь резюме, передается в качестве параметра этому методу. Вся сводка печатается в выходных данных. Для настроики количества предложений в сводном тексте, которое будет отображаться, используется аргумент sentences метода
+					</p>
+					<aside class="notes">
+						Terminology - Dataset, Features & Model.
+					</aside>
+				</section>
+				<section>
+					<p>
+						set_lang(): для настройки необходимого языка страницы Википедии, если страница существует на выбранном языке. Каждый язык имеет стандартный префиксный код , который передается в качестве аргумента методу
+					</p>
+					<aside class="notes">
+						Terminology - Dataset, Features & Model.
+					</aside>
+				</section>
+				<section>
+					<p>
+						search(): выполняет поиск в Википедии запроса, который предоставляется ему в качестве аргумента. В результате этот метод возвращает список всех заголовков статьи, содержащих запрос
+					</p>
+					<aside class="notes">
+						Terminology - Dataset, Features & Model.
+					</aside>
+				</section>
+				<section>
+					<p>
+						page(‘’).url: для получения URL-адрес страницы Википедии, используется атрибут url. URL-адреса Youtube и shutterstock формируются на основании стандартного URL-адреса поиска для этих ресурсов:  url=f"https://www.youtube.com/results?search_query=<b>{message.text}</b>&sp=CAA%253D", url=f"https://www.shutterstock.com/ru/search/<b>{message.text}</b>"
+					</p>
+					<aside class="notes">
+						Terminology - Dataset, Features & Model.
+					</aside>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Монетизация проекта</h3>
+					<img src="./images/money.jpg" alt="money">
+					<aside class="notes">
+						Process.
+					</aside>
+				</section>
+				<section>
+					<p>
+						Извлечение прибыли от проекта возможно за счет размещения рекламы в ответах на определенные запросы, также возможно использование геолокации (IP Geolocation API) для предложений рекламы из конкретных регионов
+					</p>
+					<img src="./images/advertising.png" alt="advertising">
+					<aside class="notes">
+					Process - Data Collection, Data Preparation, Training, Evaluation, Tuning.
+					</aside>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Конкуренты</h3>
+					<img src="./images/pywikibot.png" alt="pywikibot">
+					<aside class="notes">
+						Ada Lovelace realised that machines had the potential to understand the world without the need for human assistance.
+					</aside>
+				</section>
+				<section>
+					<p>В стандартном боте PyWikiBot отсутствует возможность выбора языка, ответ на запрос формируется только одним большим сообщением, отсутствует дополнительный функционал
+					</p>
+					<img src="./images/expywikibot.png" alt="expywikibot">
+					<aside class="notes">
+						Probability is orderly opinion… inference from data is nothing other than the revision of such opinion in the light of relevant new information — Thomas Bayes.
+					</aside>
+				</section>
+				</section>
+		    	<section>
+					<h2>Спасибо за внимание!</h2>
+					
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
